@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sinwama-83cc6": {
+      "hosting": {
+        "sinwama": [
+          "sinwama-83cc6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sinwama-83cc6"
+  }
+}

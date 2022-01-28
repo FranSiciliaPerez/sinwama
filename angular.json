@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "sinwama:build:production",
+            "firebaseProject": "sinwama-83cc6",
+            "firebaseHostingSite": "sinwama-83cc6"
+          }
         }
       }
     }
