@@ -8,6 +8,9 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../../domain/product';
+import { ProductService } from '../../service/productservice';
 
 @NgModule({
   declarations: [
@@ -25,3 +28,18 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+@Component({
+    templateUrl: './tablebasicdemo.html'
+})
+export class TableBasicDemo implements OnInit {
+
+    products: Product[];
+
+    constructor(private productService: ProductService) { }
+
+    ngOnInit() {
+        this.productService.getProductsSmall().then(data => this.products = data);
+    }
+}
